@@ -15,7 +15,7 @@ func main() {
 		fmt.Printf("Nilai j = %v\n", j)
 		if j == 4{
 			for k := 0; k < len(uniChar); k++{
-					fmt.Printf("character %U '%c' starts at byte position %v\n",uniChar[k] ,uniChar[k],k*2)
+					fmt.Printf("character %U '%c' starts at byte position %v\n", uniChar[k], uniChar[k], k*2)
 			}
 			j++
 		}
