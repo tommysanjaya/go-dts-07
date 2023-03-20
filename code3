@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	countChars("selamat malam")
+}
+
+func countChars(str string) {
+    charMap := make(map[rune]int)
+
+    // Count the number of characters, print the char for each string
+    for _, char := range str {
+        charMap[char]++
+		fmt.Printf("%c\n", char)
+    }
+
+    // Print the number of characters in alphabetical order
+    var keys []rune
+    for k := range charMap {
+        keys = append(keys, k)
+    }
+    sort.Slice(keys, func(i, j int) bool { return keys[i] < keys[j] })
+
+	fmt.Printf("map[")
+    for _, k := range keys {
+        fmt.Printf(" %c:%d", k, charMap[k])
+    }
+	fmt.Printf("]")
+}
